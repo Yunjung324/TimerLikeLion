@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body,
+        header,
+        main,
+        footer {
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            text-align: center;
+            margin: 72px;
+        }
+        body {
+            background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        footer{
+            margin: 103px;
+            text-align: center;
+        }
+
+        .timer-section {
+            margin: auto;
+            width: 400px;
+            height: 360px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+            border-radius: 16px;
+        }
+
+        .input-section {
+            display: flex;
+            flex-direction: row;
+            margin: 40px;
+        }
+
+        input {
+            background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+            border: 1px solid #354971;
+            border-radius: 4px;
+            width: 80px;
+            height: 80px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+            font-size: 40px;
+            text-align: center;
+            color: #FFFFFF;
+            text-align: center;
+            margin: 10px;
+        }
+
+        button{
+            background: #324577;
+            color: #617199;
+            border-radius: 50px;
+            width : 112px;
+            height: 48px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #A5B6EE;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header><img src= "weniv-logo.png" alt="weniv"></header>
+        <main class="timer-section">
+            <h2>Timer</h2>
+            <div class="input-section">
+                <input class = "input-hour" type="number" value="00" step="1">
+                <input class = "input-min" type="number" value="00" step="1">
+                <input class = "input-sec" type="number" value="00" step="1" max = "59">
+            </div>
+            <div class="btn-section">
+                <button class = "start-btn">START</button>
+                <button class = "reset-btn">RESET</button>
+            </div>
+        </main>
+        <footer><img src="wenivcorp.png" alt = "weniv corp"></footer>
+    </div>
+
+    <script>
+        const inputSection = document.querySelector("input-section");
+        const hour = inputSection.querySelector(".input-hour");
+        const min = inputSection.querySelector(".input-min");
+        const sec = inputSection.querySelector(".input-sec");
+        const startBtn = document.querySelector(".start-btn");
+        const resetBtn = document.querySelector(".reset-btn");
+
+        function onClickStartBtn(){
+        }
+
+        function onClickResetBtn(){
+            hour.innerHTML = "00";
+            min.innerHTML = "00";
+            sec.innerHTML = "00";
+        }
+
+        startBtn.addEventListener("click", onClickStartBtn);
+        resetBtn.addEventListener("click", onClickResetBtn);
+    </script>
+</body>
+
+</html>
